@@ -165,3 +165,9 @@ class ShapeNetDataLoader:
             #     print('[INFO] %s Collecting %d of %d' % (dt.now(), sample_idx + 1, n_samples))
 
         return files_of_taxonomy
+
+DATASET_LOADER_MAPPING = {
+    'ShapeNet': ShapeNetDataLoader
+    # 'Pascal3D': Pascal3dDataLoader,
+    # 'Pix3D': Pix3dDataLoader
+}  # yapf: disable
