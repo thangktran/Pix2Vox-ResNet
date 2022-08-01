@@ -19,6 +19,7 @@ from pprint import pprint
 from config import cfg
 from training.train import train
 from training.test import test_net
+from training.vox_gen import vox_gen
 
 
 def get_args_from_command_line():
@@ -30,6 +31,7 @@ def get_args_from_command_line():
                         type=str)
     parser.add_argument('--rand', dest='randomize', help='Randomize (do not use a fixed seed)', action='store_true')
     parser.add_argument('--test', dest='test', help='Test neural networks', action='store_true')
+    parser.add_argument('--gen', dest='gen', help='Generate vox from images', action='store_true')
     parser.add_argument('--batch-size',
                         dest='batch_size',
                         help='name of the net',
@@ -72,15 +74,21 @@ def main():
         os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
     # Start train/test process
-    if not args.test:
+    print(args)
+    if not args.test and not args.gen:
         train(cfg)
-    else:
+    elif args.test:
         if 'WEIGHTS' in cfg.CONST and os.path.exists(cfg.CONST.WEIGHTS):
             test_net(cfg)
         else:
             print('[FATAL] %s Please specify the file path of checkpoint.' % (dt.now()))
             sys.exit(2)
-
+    elif args.gen:
+        if 'WEIGHTS' in cfg.CONST and os.path.exists(cfg.CONST.WEIGHTS):
+            vox_gen(cfg)
+        else:
+            print('[FATAL] %s Please specify the file path of checkpoint.' % (dt.now()))
+            sys.exit(2)
 
 if __name__ == '__main__':
     # Check python version

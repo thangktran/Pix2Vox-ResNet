@@ -66,6 +66,11 @@ class ShapeNetDataset(torch.utils.data.dataset.Dataset):
             selected_rendering_image_paths = [rendering_image_paths[i] for i in range(self.n_views_rendering)]
 
         rendering_images = []
+
+        if self.dataset_type == DatasetType.TEST:
+            print('=====================================\n')
+            print('[DATASET] image_list:\n %s \n' % (selected_rendering_image_paths))
+
         for image_path in selected_rendering_image_paths:
             rendering_image = cv2.imread(image_path, cv2.IMREAD_UNCHANGED).astype(np.float32) / 255.
             if len(rendering_image.shape) < 3:
