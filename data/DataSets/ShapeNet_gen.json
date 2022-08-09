@@ -1,0 +1,93 @@
+[
+    {
+        "taxonomy_id": "02691156",
+        "taxonomy_name": "aeroplane",
+        "test": [
+            "6c432109eee42aed3b053f623496d8f5"
+        ]
+    },
+    {
+        "taxonomy_id": "02828884",
+        "taxonomy_name": "bench",
+        "test": [
+            "891b8a01ad71af2db7e843606969432b"
+        ]
+    },
+    {
+        "taxonomy_id": "02933112",
+        "taxonomy_name": "cabinet",
+        "test": [
+            "d5c60b873643f0e99f0825ef57cf78df"
+        ]
+    },
+    {
+        "taxonomy_id": "02958343",
+        "taxonomy_name": "car",
+        "test": [
+            "d43dc96daed9ba0f91bfeeca48a08b93"
+        ]
+    },
+    {
+        "taxonomy_id": "03001627",
+        "taxonomy_name": "chair",
+        "test": [
+            "3b3a9f4e3aa9f2f4d39a194653571dfc"
+        ]
+    },
+    {
+        "taxonomy_id": "03211117",
+        "taxonomy_name": "display",
+        "test": [
+            "5286df5fdb7ab5cf403c2939fca0114"
+        ]
+    },
+    {
+        "taxonomy_id": "03636649",
+        "taxonomy_name": "lamp",
+        "test": [
+            "8006e3cb3ba934a05b977412e02c412c"
+        ]
+    },
+    {
+        "taxonomy_id": "03691459",
+        "taxonomy_name": "speaker",
+        "test": [
+            "2686bb573a9bae79d34aabb2f31dae9e"
+        ]
+    },
+    {
+        "taxonomy_id": "04090263",
+        "taxonomy_name": "rifle",
+        "test": [
+            "beb75684ec2f965412b38b1d99376c0b"
+        ]
+    },
+    {
+        "taxonomy_id": "04256520",
+        "taxonomy_name": "sofa",
+        "test": [
+            "cb7cee345d3e7f75593ebeeedbff73b"
+        ]
+    },
+    {
+        "taxonomy_id": "04379243",
+        "taxonomy_name": "table",
+        "test": [
+            "bc23348d2f16d4237155483601ac0c56"
+        ]
+    },
+    {
+        "taxonomy_id": "04401088",
+        "taxonomy_name": "telephone",
+        "test": [
+            "8fcae817c180d5224208dfa1c5fa1065"
+        ]
+    },
+    {
+        "taxonomy_id": "04530566",
+        "taxonomy_name": "watercraft",
+        "test": [
+            "ff70051c32217b2df671917093bd361"
+        ]
+    }
+]

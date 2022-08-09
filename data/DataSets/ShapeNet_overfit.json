@@ -1,0 +1,54 @@
+[
+	{
+		"taxonomy_id": "02691156",
+		"taxonomy_name": "aeroplane",
+		"baseline": {
+			"1-view": 0.513,
+			"2-view": 0.536,
+			"3-view": 0.549,
+			"4-view": 0.556,
+			"5-view": 0.561
+		},
+		"test": [
+			"6c432109eee42aed3b053f623496d8f5",
+			"a9b95631bcbefe9ad225a1c252daae25",
+			"5d8583703889178a8bc354dd4eb23614"
+		],
+		"train": [
+			"6c432109eee42aed3b053f623496d8f5",
+			"a9b95631bcbefe9ad225a1c252daae25",
+			"5d8583703889178a8bc354dd4eb23614"
+		],
+		"val": [
+			"6c432109eee42aed3b053f623496d8f5",
+			"a9b95631bcbefe9ad225a1c252daae25",
+			"5d8583703889178a8bc354dd4eb23614"
+		]
+	},
+	{
+		"taxonomy_id": "02828884",
+		"taxonomy_name": "bench",
+		"baseline": {
+			"1-view": 0.421,
+			"2-view": 0.484,
+			"3-view": 0.502,
+			"4-view": 0.516,
+			"5-view": 0.527
+		},
+		"test": [
+			"891b8a01ad71af2db7e843606969432b",
+			"682cb02cd40c9fa412b60d5939b55d61",
+			"fbed7adcac3217912056b4bd5d870b47"
+		],
+		"train": [
+			"891b8a01ad71af2db7e843606969432b",
+			"682cb02cd40c9fa412b60d5939b55d61",
+			"fbed7adcac3217912056b4bd5d870b47"
+		],
+		"val": [
+			"891b8a01ad71af2db7e843606969432b",
+			"682cb02cd40c9fa412b60d5939b55d61",
+			"fbed7adcac3217912056b4bd5d870b47"
+		]
+	}
+]
