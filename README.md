@@ -1,5 +1,28 @@
-# 1 views
+# Pix2Vox-ResNet
 
+This project is part of the course "Machine Learning for 3D Geometry" from Technical University, offered in Sommer Semester 2022.
+
+![Overview](./Pix2Vox-Overview.jpg)
+(source: https://github.com/hzxie/Pix2Vox)
+
+This project is largely based on previous work from Pix2Vox (Xie et al. 2019).
+Pix2Vox is an encoder-decoder-based framework for single-view or multi-view 3D shape reconstruction. 
+It utilizes a pre-trained VGG-16 as part of its encoder to extract visual representations from the input images. 
+In our project, we conduct an ablation study on Pix2Vox’s encoder by replacing the pre-trained VGG-16 with a pre-trained ResNet-152, which has been shown to gain higher accuracy on the ImageNet benchmark. 
+Our aim is to verify whether learned 2D features from pre-trained models with better accuracy on ImageNet can be used to generate 3D shape reconstructions of better quality. Experimental results on the ShapeNet benchmark indicate that the model using ResNet-152 gains an absolute IoU increase of 0.3% when using more than 12 views, while underperforming the model using VGG-16 when a small amount of views is used.
+
+# Teams
+
+- Cuong Nguyen
+- Michelle Espranita Liman
+- Thang Tran
+- Viet Nguyen
+
+# Test Results
+
+## 1 view
+
+```
 ============================ TEST RESULTS ============================
 Taxonomy        #Sample Baseline        t=0.20  t=0.30  t=0.40  t=0.50
 aeroplane       810     0.5130          0.6047  0.6235  0.6314  0.6289
@@ -16,9 +39,11 @@ table           1703    0.5130          0.5655  0.5749  0.5791  0.5776
 telephone       211     0.6610          0.7302  0.7395  0.7458  0.7502
 watercraft      389     0.5130          0.5489  0.5627  0.5675  0.5633
 Overall                                 0.6182  0.6281  0.6313  0.6277
+```
 
-# 2 views
+## 2 views
 
+```
 ============================ TEST RESULTS ============================
 Taxonomy        #Sample Baseline        t=0.20  t=0.30  t=0.40  t=0.50
 aeroplane       810     0.5360          0.6438  0.6638  0.6693  0.6629
@@ -35,9 +60,11 @@ table           1703    0.5500          0.5990  0.6090  0.6121  0.6090
 telephone       211     0.7170          0.7731  0.7830  0.7881  0.7907
 watercraft      389     0.5760          0.6034  0.6186  0.6211  0.6138
 Overall                                 0.6578  0.6685  0.6706  0.6651
+```
 
-# 3 views
+## 3 views
 
+```
 ============================ TEST RESULTS ============================
 Taxonomy        #Sample Baseline        t=0.20  t=0.30  t=0.40  t=0.50
 aeroplane       810     0.5490          0.6602  0.6806  0.6854  0.6770
@@ -54,9 +81,11 @@ table           1703    0.5640          0.6143  0.6239  0.6262  0.6224
 telephone       211     0.7320          0.7950  0.8044  0.8093  0.8120
 watercraft      389     0.5960          0.6182  0.6322  0.6338  0.6248
 Overall                                 0.6729  0.6833  0.6846  0.6784
+```
 
-# 4 views
+## 4 views
 
+```
 ============================ TEST RESULTS ============================
 Taxonomy        #Sample Baseline        t=0.20  t=0.30  t=0.40  t=0.50
 aeroplane       810     0.5560          0.6684  0.6882  0.6915  0.6822
@@ -73,9 +102,11 @@ table           1703    0.5730          0.6236  0.6323  0.6333  0.6281
 telephone       211     0.7380          0.7995  0.8108  0.8164  0.8188
 watercraft      389     0.6040          0.6251  0.6384  0.6385  0.6291
 Overall                                 0.6803  0.6904  0.6910  0.6840
+```
 
-# 5 views
+## 5 views
 
+```
 ============================ TEST RESULTS ============================
 Taxonomy        #Sample Baseline        t=0.20  t=0.30  t=0.40  t=0.50
 aeroplane       810     0.5610          0.6735  0.6936  0.6963  0.6860
@@ -92,9 +123,11 @@ table           1703    0.5800          0.6302  0.6383  0.6386  0.6327
 telephone       211     0.7540          0.8079  0.8183  0.8230  0.8243
 watercraft      389     0.6100          0.6303  0.6437  0.6441  0.6340
 Overall                                 0.6851  0.6950  0.6951  0.6876
+```
 
-# 8 views
+## 8 views
 
+```
 ============================ TEST RESULTS ============================
 Taxonomy        #Sample Baseline        t=0.20  t=0.30  t=0.40  t=0.50
 aeroplane       810     N/a             0.6802  0.6999  0.7024  0.6914
@@ -111,9 +144,11 @@ table           1703    N/a             0.6372  0.6442  0.6437  0.6376
 telephone       211     N/a             0.8212  0.8312  0.8363  0.8375
 watercraft      389     N/a             0.6378  0.6513  0.6513  0.6403
 Overall                                 0.6925  0.7020  0.7016  0.6938
+```
 
-# 12 views
+## 12 views
 
+```
 ============================ TEST RESULTS ============================
 Taxonomy        #Sample Baseline        t=0.20  t=0.30  t=0.40  t=0.50
 aeroplane       810     N/a             0.6835  0.7033  0.7056  0.6938
@@ -130,9 +165,11 @@ table           1703    N/a             0.6420  0.6487  0.6480  0.6418
 telephone       211     N/a             0.8191  0.8280  0.8325  0.8339
 watercraft      389     N/a             0.6419  0.6559  0.6566  0.6456
 Overall                                 0.6963  0.7055  0.7049  0.6967
+```
 
-# 16 views
+## 16 views
 
+```
 ============================ TEST RESULTS ============================
 Taxonomy        #Sample Baseline        t=0.20  t=0.30  t=0.40  t=0.50
 aeroplane       810     N/a             0.6853  0.7050  0.7077  0.6952
@@ -149,9 +186,11 @@ table           1703    N/a             0.6449  0.6516  0.6507  0.6446
 telephone       211     N/a             0.8294  0.8390  0.8426  0.8424
 watercraft      389     N/a             0.6455  0.6586  0.6593  0.6485
 Overall                                 0.6988  0.7079  0.7072  0.6990
+```
 
-# 20 views
+## 20 views
 
+```
 ============================ TEST RESULTS ============================
 Taxonomy        #Sample Baseline        t=0.20  t=0.30  t=0.40  t=0.50
 aeroplane       810     N/a             0.6868  0.7064  0.7085  0.6964
@@ -168,123 +207,4 @@ table           1703    N/a             0.6462  0.6531  0.6522  0.6462
 telephone       211     N/a             0.8331  0.8416  0.8443  0.8439
 watercraft      389     N/a             0.6477  0.6607  0.6601  0.6485
 Overall                                 0.7001  0.7089  0.7081  0.6998
-
-# RES152 Architecture
-
-Sequential(
-  (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
-  (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-  (2): ReLU(inplace=True)
-  (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
-  (4): Sequential(
-    (0): Bottleneck(
-      (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-      (downsample): Sequential(
-        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
-        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      )
-    )
-    (1): Bottleneck(
-      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-    )
-    (2): Bottleneck(
-      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-    )
-  )
-  (5): Sequential(
-    (0): Bottleneck(
-      (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-      (downsample): Sequential(
-        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
-        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      )
-    )
-    (1): Bottleneck(
-      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-    )
-    (2): Bottleneck(
-      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-    )
-    (3): Bottleneck(
-      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-    )
-    (4): Bottleneck(
-      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-    )
-    (5): Bottleneck(
-      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-    )
-    (6): Bottleneck(
-      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-    )
-    (7): Bottleneck(
-      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
-      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (relu): ReLU(inplace=True)
-    )
-  )
-)
+```
