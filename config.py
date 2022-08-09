@@ -31,8 +31,8 @@ __C.TRAIN.NUM_EPOCHES                       = 350 ##STEPS
 #
 __C.CONST                                   = edict()
 __C.CONST.RNG_SEED                          = 0
-__C.CONST.DEVICE                            = None #'0'
-__C.CONST.BATCH_SIZE                        = 64
+__C.CONST.DEVICE                            = None # '0'
+__C.CONST.BATCH_SIZE                        = 1
 __C.CONST.N_VIEWS_RENDERING                 = 20
 __C.CONST.WEIGHTS                           = '/home/thangktran/projects/github/M.Sc.-Robotics-Cognition-Intelligence/sem2/M.Sc.-IN2392_ML3D/mvcnn_with_enet_reconstruction/output/best-ckpt.pth'
 __C.CONST.IMG_W                             = 224       # Image width for input

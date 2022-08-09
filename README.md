@@ -1,6 +1,6 @@
 # Pix2Vox-ResNet
 
-This project is part of the course "Machine Learning for 3D Geometry" from Technical University, offered in Sommer Semester 2022.
+This project is part of the course "Machine Learning for 3D Geometry" from Technical University of Munich, offered in Summer Semester 2022.
 
 ![Overview](./Pix2Vox-Overview.jpg)
 (source: https://github.com/hzxie/Pix2Vox)

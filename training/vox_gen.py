@@ -63,7 +63,6 @@ def vox_gen(cfg,
             data.data_loaders.DatasetType.TEST, cfg.CONST.N_VIEWS_RENDERING, test_transforms),
                                                        batch_size=1,
                                                        num_workers=1,
-                                                       pin_memory=True,
                                                        shuffle=False)
 
     # Set up networks
